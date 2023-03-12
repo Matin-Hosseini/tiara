@@ -1,0 +1,238 @@
+:root {
+  --primary-color: #f5e9cf;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+html {
+  font-size: 62.5%;
+  /* overflow-x: hidden; */
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  background-color: var(--primary-color);
+  padding-top: 6.5rem;
+  font-family: "iran-sans";
+  /* overflow-x: hidden; */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #2e39bf;
+    border-bottom: .5px solid #d8d0d0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+
+.nav__logo {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.hamburger-menu {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(-13deg);
+  -webkit-transform: rotate(-13deg);
+  -moz-transform: rotate(-13deg);
+  -ms-transform: rotate(-13deg);
+  -o-transform: rotate(-13deg);
+  cursor: pointer;
+}
+
+.hamburger-menu__line {
+  width: 3rem;
+  height: 0.3rem;
+  background-color: #fff;
+  border-radius: 10rem;
+  -webkit-border-radius: 10rem;
+  -moz-border-radius: 10rem;
+  -ms-border-radius: 10rem;
+  -o-border-radius: 10rem;
+  position: relative;
+  left: 1rem;
+}
+
+.hamburger-menu__line::before,
+.hamburger-menu__line::after {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: inherit;
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+}
+
+.hamburger-menu__line::before {
+  bottom: 0.9rem;
+  left: -1rem;
+}
+
+.hamburger-menu__line::after {
+  top: 0.9rem;
+  left: -1rem;
+}
+
+/* .hamburger-menu--fade .hamburger-menu__line{
+    width: 5rem;
+    left: 6rem;
+}
+
+.hamburger-menu--fade .hamburger-menu__line{
+
+} */
+
+.menu {
+  display: none;
+}
+
+.menu__item {
+  margin: 0 1rem;
+}
+
+.menu__item:last-child {
+  margin: 0;
+}
+.menu__link {
+  position: relative;
+  padding: 1rem 0;
+  color: #fff;
+}
+
+.menu__link::before {
+  content: "";
+  position: absolute;
+  background-color: red;
+  width: 0;
+  height: 0.2rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transition: width 0.2s ease-in-out;
+  -webkit-transition: width 0.2s ease-in-out;
+  -moz-transition: width 0.2s ease-in-out;
+  -ms-transition: width 0.2s ease-in-out;
+  -o-transition: width 0.2s ease-in-out;
+}
+
+.menu__link:hover::before {
+  width: 100%;
+}
+
+/*
+***********
+    main
+***********
+*/
+.main{}
+
+
+/*
+***********
+    home section
+***********
+*/
+
+.home{
+  background-color: #2e39bf;
+  color: #fff;
+  padding-top: 3rem;
+  position: relative;
+  overflow: hidden;
+  
+}
+/* .home >  *{
+  z-index: 100;
+}
+.home::before{
+  content: "";
+  position: absolute;
+  background-color: rgba(37,46,176,1);
+  width: 150%;
+  height: 700px;
+  display: inline-block;
+  transform: rotate(150deg);
+  -webkit-transform: rotate(150deg);
+  -moz-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  -o-transform: rotate(150deg);
+  z-index: 0;
+  left: 0;
+} */
+
+.home-content__blockquote{
+  font-size: 1.5rem;
+  color: cyan;
+  position: relative;
+  max-width: 31rem;
+}
+.home-content__blockquote::after{
+  content: "";
+  position: absolute;
+  width: 4rem;
+  height: .1rem;
+  border-radius: 5rem;
+  -webkit-border-radius: 5rem;
+  -moz-border-radius: 5rem;
+  -ms-border-radius: 5rem;
+  -o-border-radius: 5rem;
+  left: -4.5rem;
+  top: 1.4rem;
+  
+  background-color: cyan;
+}
+
+.home-content__title{
+  font-size: 3.6rem;
+  margin: 5rem 0;
+}
+.home-content__caption{
+  font-size: 1.8rem;
+  color: #d8d0d0; /*  .g-text  */
+}
+.home-content__btns{
+  margin-top: 4rem;
+}
+.btn{
+  padding: 1rem 3.5rem;
+  background-image: linear-gradient(to right, #21d397 0%, #7450fe 50%, #21d397 100%);
+  border-radius: 10rem;
+  -webkit-border-radius: 10rem;
+  -moz-border-radius: 10rem;
+  -ms-border-radius: 10rem;
+  -o-border-radius: 10rem;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.home-img svg{
+  width: 100%;
+  height: 100%;
+}
