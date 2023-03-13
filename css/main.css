@@ -1,11 +1,16 @@
 :root {
-  --primary-color: #f5e9cf;
+  --primary-color: #edf5ff;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+svg{
+  width: 100%;
+  height: 100%;
 }
 
 a {
@@ -27,14 +32,92 @@ body {
   /* overflow-x: hidden; */
 }
 
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #2e39bf;
-    border-bottom: .5px solid #d8d0d0;
+/*
+************
+  components
+************
+*/
+
+.section-info {
+  text-align: center;
+  margin: 5rem 0;
 }
+.section-info__text {
+  color: #506cea;
+  font-size: 1.4rem;
+}
+.section-info__title {
+  color: #000;
+  margin: 1rem 0;
+  margin-bottom: 5rem;
+  position: relative;
+  font-size: 3rem;
+}
+
+.section-info__title::before {
+  content: "";
+  position: absolute;
+  width: 7rem;
+  height: 0.3rem;
+  border-radius: 10rem;
+  -webkit-border-radius: 10rem;
+  -moz-border-radius: 10rem;
+  -ms-border-radius: 10rem;
+  -o-border-radius: 10rem;
+  background-color: #506cea;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -2.5rem;
+}
+.section-info__caption {
+  color: #6f8ba4;
+  max-width: 63rem;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+/*
+************
+  styles
+************
+*/
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #2e39bf;
+  border-bottom: 0.5px solid #d8d0d0;
+  z-index: 100000;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+}
+
+.sticky-nav{
+  background-color: #fff;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  box-shadow: 0 1rem 6rem #000;
+}
+
+.sticky-nav .nav__logo,
+.sticky-nav .menu__link{
+  color: #000;
+}
+
+.sticky-nav .hamburger-menu__line{
+  background-color: #000;
+}
+
+
 
 .nav {
   display: flex;
@@ -123,6 +206,7 @@ body {
   position: relative;
   padding: 1rem 0;
   color: #fff;
+  font-family: "yekan";
 }
 
 .menu__link::before {
@@ -151,8 +235,8 @@ body {
     main
 ***********
 */
-.main{}
-
+.main {
+}
 
 /*
 ***********
@@ -160,13 +244,12 @@ body {
 ***********
 */
 
-.home{
+.home {
   background-color: #2e39bf;
   color: #fff;
-  padding-top: 3rem;
+  padding: 5rem 0;
   position: relative;
   overflow: hidden;
-  
 }
 /* .home >  *{
   z-index: 100;
@@ -187,17 +270,17 @@ body {
   left: 0;
 } */
 
-.home-content__blockquote{
+.home-content__blockquote {
   font-size: 1.5rem;
   color: cyan;
   position: relative;
   max-width: 31rem;
 }
-.home-content__blockquote::after{
+.home-content__blockquote::after {
   content: "";
   position: absolute;
   width: 4rem;
-  height: .1rem;
+  height: 0.1rem;
   border-radius: 5rem;
   -webkit-border-radius: 5rem;
   -moz-border-radius: 5rem;
@@ -205,24 +288,29 @@ body {
   -o-border-radius: 5rem;
   left: -4.5rem;
   top: 1.4rem;
-  
+
   background-color: cyan;
 }
 
-.home-content__title{
+.home-content__title {
   font-size: 3.6rem;
   margin: 5rem 0;
 }
-.home-content__caption{
+.home-content__caption {
   font-size: 1.8rem;
   color: #d8d0d0; /*  .g-text  */
 }
-.home-content__btns{
+.home-content__btns {
   margin-top: 4rem;
 }
-.btn{
+.btn {
   padding: 1rem 3.5rem;
-  background-image: linear-gradient(to right, #21d397 0%, #7450fe 50%, #21d397 100%);
+  background-image: linear-gradient(
+    to right,
+    #21d397 0%,
+    #7450fe 50%,
+    #21d397 100%
+  );
   border-radius: 10rem;
   -webkit-border-radius: 10rem;
   -moz-border-radius: 10rem;
@@ -232,7 +320,49 @@ body {
   font-size: 1.2rem;
 }
 
-.home-img svg{
+.home-img svg {
   width: 100%;
   height: 100%;
+}
+
+.features {
+  margin-bottom: 10rem;
+}
+
+.feature {
+  margin-bottom: 3rem;
+  padding: 3rem;
+  border-radius: 0 5rem 0 5rem;
+  -webkit-border-radius: 0 5rem 0 5rem;
+  -moz-border-radius: 0 5rem 0 5rem;
+  -ms-border-radius: 0 5rem 0 5rem;
+  -o-border-radius: 0 5rem 0 5rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.feature:hover {
+  background-color: #2e39bf;
+  color: #fff !important;
+}
+.feature:hover:hover > * {
+  color: #fff;
+}
+/* .feature__logo{
+  width: 4rem;
+  height: 4rem;
+} */
+.feature__title {
+  font-size: 2rem;
+  font-family: "yekan";
+  margin: 3rem 0;
+}
+.feature__caption {
+  color: #6f8ba4;
+  font-size: 1.6rem;
+  font-family: "vasir";
 }

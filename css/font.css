@@ -2,3 +2,13 @@
     font-family: "iran-sans";
     src: url(../assets/font/iranian-sans.ttf);
 }
+
+@font-face {
+    font-family: "vasir";
+    src: url(../assets/font/Vazir.ttf);
+}
+
+@font-face {
+    font-family: "yekan";
+    src: url(../assets/font/Yekan.ttf);
+}
