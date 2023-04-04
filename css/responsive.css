@@ -1,51 +1,202 @@
 @media (max-width: 400px) {
-  .home {
+  .custom-btn {
+    font-size: 1.2rem;
+  }
+  .question__title {
+    font-size: 1.2rem;
+  }
+
+  .contat-us-box {
+    flex-direction: column;
     text-align: center;
+    gap: 1rem;
+  }
+
+  .contat-us-box i {
+    font-size: 2rem;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+  }
+
+  .contact-us-box__title {
+  }
+  .contact-us-box__info {
+    font-size: 1.4rem;
+  }
+
+  
+}
+
+@media (max-width: 560px) {
+  .home__content {
+    width: 90%;
+  }
+
+  .question__title {
+    font-size: 1.3rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .nesletter-form__email {
+    padding: 1rem 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .newsletter-form__submit-btn {
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
   }
 }
 
 @media (min-width: 576px) {
-
 }
 
 @media (min-width: 768px) {
-    .funfact:before,
-    .funfact::after{
-      content: "";
-      position: absolute;
-      width: .2rem;
-      height: 10rem;
-      background-color: #fff;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      transition: all .3s;
-      -webkit-transition: all .3s;
-      -moz-transition: all .3s;
-      -ms-transition: all .3s;
-      -o-transition: all .3s;
-    }
-    .funfact::before{
-      top: -12rem;
-    }
-    .funfact::after{
-      bottom: -12rem;
-    }
-    .funfact:hover.funfact::before{
-      top: -25rem;
-    }
-    .funfact:hover.funfact::after{
-      bottom: -25rem;
-    }
+  .funfact:before,
+  .funfact::after {
+    content: "";
+    position: absolute;
+    width: 0.2rem;
+    height: 10rem;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+  }
+  .funfact::before {
+    top: -12rem;
+  }
+  .funfact::after {
+    bottom: -12rem;
+  }
+  .funfact:hover.funfact::before {
+    top: -25rem;
+  }
+  .funfact:hover.funfact::after {
+    bottom: -25rem;
+  }
 
-    .funfact{
-        margin: 0;
-    }
+  .funfact {
+    margin: 0;
+  }
+
+  .price__item{
+    padding-top: 3rem 1.5rem;
+  }
+
+  .price__value{
+    font-size: 3rem;
+  }
+  .price__value::before,
+  .price__value::after{
+    font-size: 1.4rem;
+  }
+
+  .price__link{
+    font-size: 1.3rem;
+  }
+
+  .price__item--standard {
+    transform: translateY(-3rem);
+    -webkit-transform: translateY(-3rem);
+    -moz-transform: translateY(-3rem);
+    -ms-transform: translateY(-3rem);
+    -o-transform: translateY(-3rem);
+  }
+
+  .price__item {
+    padding: 3rem 2rem;
+  }
+
+  .comment__caption {
+    max-width: 24rem;
+  }
+
+  .question__title {
+    font-size: 1.6rem;
+  }
+
+  .footer__caption {
+    /* max-width: 29rem; */
+    /* font-size: 1.4rem; */
+  }
 }
 
 @media (min-width: 992px) {
-  .home {
-    padding-top: 12rem;
+  * > svg {
+    padding: 5rem !important;
+  }
+
+  .nav {
+    padding: 2rem 0;
+  }
+
+  .menu{
+    position: static;
+    display: flex;
+    height: auto;
+    opacity: 1;
+    background-color: transparent;
+    gap: 2.5rem;
+    padding: 0;
+  }
+
+
+  .home-content__blockquote::after {
+    content: "";
+    position: absolute;
+    width: 4rem;
+    height: 0.1rem;
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+    left: -4.5rem;
+    top: 1.4rem;
+
+    background-color: cyan;
+  }
+
+  .about-us-info-list__item {
+    font-size: 1.4rem;
+  }
+
+  .services-tab {
+    margin-bottom: 3rem;
+  }
+
+  .services-tab i {
+    width: 7rem;
+    height: 7rem;
+    font-size: 4rem;
+    line-height: 7rem;
+  }
+
+  .price__value{
+    font-size: 4.5rem;
+  }
+
+  .contat-us-box {
+    gap: 2rem;
   }
 }
 
