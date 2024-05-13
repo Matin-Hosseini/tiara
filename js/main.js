@@ -47,14 +47,6 @@ const stickyNav = () =>
     ? header.classList.add("sticky-nav")
     : header.classList.remove("sticky-nav");
 
-//preloader
-const hidePreloader = () => {
-  preloader.classList.add("hide");
-  $.body.style.overflow = "visible";
-  setTimeout(() => {
-    preloader.style.display = "none";
-  }, 400);
-};
 
 //go-to-top-btn
 const showGoToTopBtn = () =>
@@ -112,7 +104,7 @@ questionsBox.addEventListener("click", (e) => {
   }
 });
 
-window.addEventListener("load", hidePreloader);
+
 window.addEventListener("load", stickyNav);
 document.addEventListener("scroll", stickyNav);
 window.addEventListener("load", showGoToTopBtn);
